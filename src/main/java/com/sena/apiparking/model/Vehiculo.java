@@ -32,9 +32,11 @@ public class Vehiculo {
 	private Long id_vehiculo;
 	@Column(unique = true, nullable = false)
 	private String placa;
+
 	@Enumerated(EnumType.STRING)
 	@Column(nullable = false)
 	private TipoVehiculo tipo;
+
 	@Lob
 	private String descripcion;
 	@OneToMany(mappedBy = "vehiculo")
